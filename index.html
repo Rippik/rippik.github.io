@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Переход в Telegram</title>
-  <script>
-    const username = "kairasvt"; // Замените USERNAME на юзернейм канала (без @)
-    const tgDeepLink = tg://resolve?domain=${username};
-    const tgWebLink = https://t.me/${username};
-
-    // Пытаемся открыть приложение Telegram
-    window.location.href = tgDeepLink;
-
-    // Если через 0.5 сек приложение не открылось, переходим в веб-версию
-    setTimeout(() => {
-      window.location.href = tgWebLink;
-    }, 500);
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Переход в Telegram-канал</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Стили остаются без изменений (как в предыдущем ответе) */
+  </style>
 </head>
 <body>
-  <p>Если Telegram не открылся, <a href="tg://resolve?domain=kairasvt">нажмите сюда</a>.</p>
+  <div class="container">
+    <!-- ... (остальная разметка) ... -->
+    <div class="channel-name">
+      <i class="fab fa-telegram"></i> @kairasvt  <!-- ЗДЕСЬ ЗАМЕНА -->
+    </div>
+    <!-- ... (остальная разметка) ... -->
+    <a href="tg://resolve?domain=kairasvt" class="btn">  <!-- ЗДЕСЬ ЗАМЕНА -->
+      Открыть сейчас
+    </a>
+  </div>
+
+  <script>
+    // Конфигурация
+    const username = "kairasvt";  // ЗДЕСЬ ЗАМЕНА
+    const tgDeepLink = tg://resolve?domain=${username};
+    const tgWebLink = https://t.me/${username};
+    
+    // Остальной скрипт без изменений...
+  </script>
 </body>
 </html>
