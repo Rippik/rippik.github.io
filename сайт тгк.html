@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Переход в Telegram</title>
+  <script>
+    const username = "kairasvt"; // Замените USERNAME на юзернейм канала (без @)
+    const tgDeepLink = tg://resolve?domain=${username};
+    const tgWebLink = https://t.me/${username};
+
+    // Пытаемся открыть приложение Telegram
+    window.location.href = tgDeepLink;
+
+    // Если через 0.5 сек приложение не открылось, переходим в веб-версию
+    setTimeout(() => {
+      window.location.href = tgWebLink;
+    }, 500);
+  </script>
+</head>
+<body>
+  <p>Если Telegram не открылся, <a href="tg://resolve?domain=kairasvt">нажмите сюда</a>.</p>
+</body>
+</html>
