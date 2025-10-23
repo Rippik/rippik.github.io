@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Переход в Telegram-канал</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Стили остаются без изменений (как в предыдущем ответе) */
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- ... (остальная разметка) ... -->
-    <div class="channel-name">
-      <i class="fab fa-telegram"></i> @kairasvt  <!-- ЗДЕСЬ ЗАМЕНА -->
-    </div>
-    <!-- ... (остальная разметка) ... -->
-    <a href="tg://resolve?domain=kairasvt" class="btn">  <!-- ЗДЕСЬ ЗАМЕНА -->
-      Открыть сейчас
-    </a>
-  </div>
-
-  <script>
-    // Конфигурация
-    const username = "kairasvt";  // ЗДЕСЬ ЗАМЕНА
-    const tgDeepLink = tg://resolve?domain=${username};
-    const tgWebLink = https://t.me/${username};
-    
-    // Остальной скрипт без изменений...
-  </script>
-</body>
-</html>
+<!-- Кнопка ЮMoney -->
+<form action="https://yoomoney.ru/quickpay/confirm.xml" method="post">
+  <input type="hidden" name="receiver" value="410011234567890">
+  <input type="hidden" name="formcomment" value="Спасибо за поддержку!">
+  <input type="hidden" name="short-dest" value="Поддержка автора">
+  <input type="hidden" name="label" value="donate-123">
+  <input type="hidden" name="quickpay-form" value="donate">
+  <input type="hidden" name="targets" value="Поддержка">
+  <input type="hidden" name="sum" value="100" data-type="number">
+  <input type="hidden" name="paymentType" value="AC">
+  <input type="submit" value="Поддержать">
+</form>
